@@ -1,6 +1,6 @@
 :root {
   --first-color: #222629;
-  --second-color: #86c232;
+  --second-color: #2584ca;
 }
 
 * {
@@ -44,9 +44,14 @@ img {
   width: 50vw;
 }
 
+.slider__images label {
+  cursor: pointer;
+}
+
 .slider__descriptions {
-  flex-basis: 50%;
+  flex-basis: auto;
   flex-shrink: 0;
+  flex-grow: 1;
   display: flex;
   flex-direction: column-reverse;
   overflow: hidden;
@@ -61,8 +66,8 @@ img {
 }
 
 .slider__controls {
-  flex-basis: 50%;
-  flex-shrink: 0;
+  flex-basis: auto;
+  flex-shrink: 1;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -132,7 +137,7 @@ img {
 figure {
   width: 50vw;
   margin: 0 auto;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
@@ -156,7 +161,6 @@ figure {
   }
   
   .slider__controls {
-
     justify-content: center;
     flex-basis: 100%;
   }
@@ -197,3 +201,258 @@ figure {
 }
 
 
+/* =============== game */
+.new-game1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--second-color);
+  transform: scale(0);
+  transition: 0.2s;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  /* border-radius: 0.5rem; */
+}
+h2 {
+  padding: 0.5rem;
+}
+.new-game1 > label {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+#game1:checked ~ .new-game1 {
+  width: 50vw;
+  height: auto;
+  transform: scale(1);
+}
+.game-field {
+  transform: scale(0);
+  background-color: #e0f0fc;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  
+}
+#game1:checked ~ .new-game1 .game-field  {
+  width: 50vw;
+  height: 20rem;
+  transform: scale(1);
+}
+
+.snow1 {
+  cursor: pointer;
+  display: block;
+  margin-top: -1.8rem;
+  offset-path: path('m1.66667,0c14.81956,37.13119 28.36503,131.48935 17.08978,193.54011c-11.27526,62.05076 -19.30533,79.73842 -15.76044,126.18585c3.54489,46.44744 19.464,85.77834 5.54889,180.94071');
+  animation-name: move;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url('./assets/snowflake.png');
+  background-size: 100% 100%;
+}
+
+
+.snow1[for="snow2"] {
+  animation-delay: 1s;
+  margin-left: 45vw;
+}
+.snow1[for="snow3"] {
+  animation-delay: 2s;
+  margin-left: 21vw;
+}
+.snow1[for="snow4"] {
+  animation-delay: 3s;
+  margin-left: 39vw;
+}
+.snow1[for="snow5"] {
+  animation-delay: 4s;
+  margin-left: 8vw;
+}
+.snow1[for="snow6"] {
+  animation-delay: 5s;
+  margin-left: 17vw;
+}
+.snow1[for="snow7"] {
+  animation-delay: 6s;
+  margin-left: 41vw;
+}
+.snow1[for="snow8"] {
+  animation-delay: 7s;
+  margin-left: 10vw;
+}
+.snow1[for="snow9"] {
+  animation-delay: 8s;
+  margin-left: 28vw;
+}
+.snow1[for="snow10"] {
+  animation-delay: 9s;
+  margin-left: 13vw;
+}
+.snow1[for="snow11"] {
+  animation-delay: 10s;
+  margin-left: 33vw;
+}
+.snow1[for="snow12"] {
+  animation-delay: 11s;
+  margin-left: 7vw;
+}
+.snow1[for="snow13"] {
+  animation-delay: 12s;
+  margin-left: 48vw;
+}
+.snow1[for="snow14"] {
+  animation-delay: 13s;
+  margin-left: 21vw;
+}
+.snow1[for="snow15"] {
+  animation-delay: 14s;
+  margin-left: 30vw;
+}
+
+
+@keyframes move {
+  0% {
+    offset-distance: 0;
+  }
+  100% {
+    offset-distance: 100%;
+
+  }
+}
+
+
+#snow1:checked ~ .snow1[for="snow1"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow2:checked ~ .snow1[for="snow2"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow3:checked ~ .snow1[for="snow3"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow4:checked ~ .snow1[for="snow4"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow5:checked ~ .snow1[for="snow5"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow6:checked ~ .snow1[for="snow6"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow7:checked ~ .snow1[for="snow7"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow8:checked ~ .snow1[for="snow8"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow9:checked ~ .snow1[for="snow9"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow10:checked ~ .snow1[for="snow10"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow11:checked ~ .snow1[for="snow11"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow12:checked ~ .snow1[for="snow12"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow13:checked ~ .snow1[for="snow13"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow14:checked ~ .snow1[for="snow14"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+#snow15:checked ~ .snow1[for="snow15"] {
+  transform: rotate(360deg) scale(0);
+  transition: 2s;
+} 
+
+
+
+@media (max-width: 767.8px) {
+  
+  #game1:checked ~ .new-game1 {
+    width: 95vw;
+  }
+  #game1:checked ~ .new-game1 .game-field  {
+    width: 95vw;
+  }
+  
+  .snow1[for="snow2"] {
+    animation-delay: 1s;
+    margin-left: 48vw;
+  }
+  .snow1[for="snow3"] {
+    animation-delay: 2s;
+    margin-left: 12vw;
+  }
+  .snow1[for="snow4"] {
+    animation-delay: 3s;
+    margin-left: 66vw;
+  }
+  .snow1[for="snow5"] {
+    animation-delay: 4s;
+    margin-left: 35vw;
+  }
+  .snow1[for="snow6"] {
+    animation-delay: 5s;
+    margin-left: 74vw;
+  }
+  .snow1[for="snow7"] {
+    animation-delay: 6s;
+    margin-left: 7vw;
+  }
+  .snow1[for="snow8"] {
+    animation-delay: 7s;
+    margin-left: 55vw;
+  }
+  .snow1[for="snow9"] {
+    animation-delay: 8s;
+    margin-left: 22vw;
+  }
+  .snow1[for="snow10"] {
+    animation-delay: 9s;
+    margin-left: 93vw;
+  }
+  .snow1[for="snow11"] {
+    animation-delay: 10s;
+    margin-left: 61vw;
+  }
+  .snow1[for="snow12"] {
+    animation-delay: 11s;
+    margin-left: 19vw;
+  }
+  .snow1[for="snow13"] {
+    animation-delay: 12s;
+    margin-left: 55vw;
+  }
+  .snow1[for="snow14"] {
+    animation-delay: 13s;
+    margin-left: 88vw;
+  }
+  .snow1[for="snow15"] {
+    animation-delay: 14s;
+    margin-left: 28vw;
+  }
+
+}
