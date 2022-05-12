@@ -77,7 +77,8 @@ img {
   cursor: pointer;
   padding: 1.5vh;
 }
-.slider__controls label div {
+.slider__controls label span {
+  display: block;
     height: 1.5vh;
     width: 1.5vh;
     background-color: var(--first-color);
@@ -85,11 +86,18 @@ img {
     border-radius: 50%;
   }
 
-.slider__controls label:hover div {
+.slider__controls label:hover span {
       background-color: var(--second-color);
       border-color: var(--second-color);
       transform: scale(1.5);
       transition: 0.5s;
+    }
+    
+    .slider__controls label:active span {
+      background-color: #13476d;
+      border-color: #13476d;
+  transform: scale(1);
+  transition: 0.5s;
 }
 
 #slide1:checked ~ .slider__images {
@@ -120,16 +128,16 @@ img {
 }
 
 
-#slide1:checked ~ .slider__controls label:nth-child(1) div {
+#slide1:checked ~ .slider__controls label:nth-child(1) span {
   background-color: transparent;
 }
-#slide2:checked ~ .slider__controls label:nth-child(2) div {
+#slide2:checked ~ .slider__controls label:nth-child(2) span {
   background-color: transparent;
 }
-#slide3:checked ~ .slider__controls label:nth-child(3) div {
+#slide3:checked ~ .slider__controls label:nth-child(3) span {
   background-color: transparent;
 }
-#slide4:checked ~ .slider__controls label:nth-child(4) div {
+#slide4:checked ~ .slider__controls label:nth-child(4) span {
   background-color: transparent;
 }
 
@@ -207,7 +215,7 @@ figure {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: var(--second-color);
+  /* background-color: var(--second-color); */
   transform: scale(0);
   transition: 0.2s;
   margin: 0 auto;
@@ -219,6 +227,11 @@ h2 {
   padding: 0.5rem;
 }
 .new-game1 > label {
+  width: 10rem;
+  margin: 0.5rem auto;
+  background-color: var(--second-color);
+  color: #fff;
+  border-radius: 5rem;
   cursor: pointer;
   padding: 0.5rem;
 }
@@ -229,7 +242,7 @@ h2 {
 }
 .game-field {
   transform: scale(0);
-  background-color: #e0f0fc;
+  /* background-color: #e0f0fc; */
   overflow: hidden;
   width: 0;
   height: 0;
@@ -247,7 +260,7 @@ h2 {
   margin-top: -1.8rem;
   offset-path: path('m1.66667,0c14.81956,37.13119 28.36503,131.48935 17.08978,193.54011c-11.27526,62.05076 -19.30533,79.73842 -15.76044,126.18585c3.54489,46.44744 19.464,85.77834 5.54889,180.94071');
   animation-name: move;
-  animation-duration: 10s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   width: 1.5rem;
