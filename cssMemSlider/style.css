@@ -36,7 +36,7 @@ input {
   /* justify-content: center; */
   width: 50vw;
   overflow: hidden;
-  gap: 1rem;
+  row-gap: 1rem;
 }
 .slider__images {
   display: flex;
@@ -52,25 +52,25 @@ img {
 
 .slider__descriptions {
   flex-basis: auto;
-  flex-shrink: 0;
-  flex-grow: 1;
+  /* flex-shrink: 0; */
+  /* flex-grow: 1; */
   display: flex;
   flex-direction: column-reverse;
   overflow: hidden;
-  height: 5vh;
+  height: 2rem;
 }
 .slider__descriptions p {
-  transform: translateY(-25vh);
-  font-size: 4.5vh;
-  line-height: 5vh;
+  transform: translateY(-7.2rem);
+  font-size: 2rem;
+  line-height: 2.4rem;
   transition: 0.4s;
   transition: transform 1s ease 0s;
 }
 
 .slider__controls {
-  flex-basis: 12.8rem;
-  margin: 0 auto;
-  /* flex-shrink: 1; */
+  flex-basis: auto;
+  margin-left: auto;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -78,12 +78,12 @@ img {
 
 .slider__controls label {
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.7rem;
 }
 .slider__controls label span {
   display: block;
-    height: 1rem;
-    width: 1rem;
+    height: 0.9rem;
+    width: 0.9rem;
     background-color: var(--first-color);
     border: 0.1rem solid var(--first-color);
     border-radius: 50%;
@@ -121,13 +121,13 @@ img {
   transform: translateY(0);
 }
 #slide2:checked ~ .slider__descriptions p {
-  transform: translateY(5vh);
+  transform: translateY(2.4rem);
 }
 #slide3:checked ~ .slider__descriptions p {
-  transform: translateY(10vh);
+  transform: translateY(4.8rem);
 }
 #slide4:checked ~ .slider__descriptions p {
-  transform: translateY(15vh);
+  transform: translateY(7.2rem);
 }
 
 
