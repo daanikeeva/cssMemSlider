@@ -78,12 +78,12 @@ img {
 
 .slider__controls label {
   cursor: pointer;
-  padding: 0.7rem;
+  padding: 1rem;
 }
 .slider__controls label span {
   display: block;
-    height: 0.9rem;
-    width: 0.9rem;
+    height: 1rem;
+    width: 1rem;
     background-color: var(--first-color);
     border: 0.1rem solid var(--first-color);
     border-radius: 50%;
@@ -107,15 +107,14 @@ img {
   transform: translateX(0);
 }
 #slide2:checked ~ .slider__images {
-  transform: translateX(-50vw);
+  transform: translateX(-25%);
 }
 #slide3:checked ~ .slider__images {
-  transform: translateX(-100vw);
+  transform: translateX(-50%);
 }
 #slide4:checked ~ .slider__images {
-  transform: translateX(-150vw);
+  transform: translateX(-75%);
 }
-
 
 #slide1:checked ~ .slider__descriptions p {
   transform: translateY(0);
@@ -152,6 +151,16 @@ figure {
   text-align: center;
 }
 
+@media (max-width:1023.98px) {
+  .slider {
+    width: 70vw;
+  }
+  img {
+    width: 70vw;
+  }
+
+}
+
 @media (max-width:767.98px), (orientation: portrait)  {
   .slider {
     width: 90vw;
@@ -176,18 +185,6 @@ figure {
     flex-basis: 100%;
   }
   
-  #slide1:checked ~ .slider__images {
-    transform: translateX(0);
-  }
-  #slide2:checked ~ .slider__images {
-    transform: translateX(-90vw);
-  }
-  #slide3:checked ~ .slider__images {
-    transform: translateX(-180vw);
-  }
-  #slide4:checked ~ .slider__images {
-    transform: translateX(-270vw);
-  }
 
   #slide1:checked ~ .slider__descriptions p {
     transform: translateY(0);
